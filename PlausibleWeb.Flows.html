@@ -8,13 +8,13 @@
     <meta name="project" content="Plausible v0.0.1">
 
 
-    <title>Plausible.Stats.Imported.SQL.Builder — Plausible v0.0.1</title>
+    <title>PlausibleWeb.Flows — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/html-elixir-FM2CSD74.css" />
 
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-E105759E.js"></script>
+    <script src="dist/sidebar_items-E74E240A.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -131,20 +131,20 @@ Pages
 
 <h1>
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/imported/sql/builder.ex#L1" title="View Source" class="icon-action" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/flows.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">Plausible.Stats.Imported.SQL.Builder</span> 
+  <span translate="no">PlausibleWeb.Flows</span> 
   <small class="app-vsn" translate="no">(Plausible v0.0.1)</small>
 
 </h1>
 
 
   <section id="moduledoc">
-<p>This module is responsible for generating SQL/Ecto expressions
-for dimensions, filters and metrics used in import table queries</p>
+<p>Static compile-time definitions for user progress flows.
+See <a href="PlausibleWeb.Components.FlowProgress.html"><code class="inline">PlausibleWeb.Components.FlowProgress</code></a> for rendering capabilities.</p>
   </section>
 
 
@@ -162,7 +162,7 @@ for dimensions, filters and metrics used in import table queries</p>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#group_imported_by/2" translate="no">group_imported_by(q, query)</a>
+        <a href="#domain_change/0" translate="no">domain_change()</a>
 
       </div>
 
@@ -170,7 +170,7 @@ for dimensions, filters and metrics used in import table queries</p>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#naive_dimension_join/3" translate="no">naive_dimension_join(q1, q2, metrics)</a>
+        <a href="#invitation/0" translate="no">invitation()</a>
 
       </div>
 
@@ -178,7 +178,7 @@ for dimensions, filters and metrics used in import table queries</p>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#select_imported_metrics/2" translate="no">select_imported_metrics(q, list)</a>
+        <a href="#provisioning/0" translate="no">provisioning()</a>
 
       </div>
 
@@ -186,7 +186,7 @@ for dimensions, filters and metrics used in import table queries</p>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#select_joined_dimensions/2" translate="no">select_joined_dimensions(q, query)</a>
+        <a href="#register/0" translate="no">register()</a>
 
       </div>
 
@@ -194,7 +194,31 @@ for dimensions, filters and metrics used in import table queries</p>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#select_joined_metrics/2" translate="no">select_joined_metrics(q, list)</a>
+        <a href="#review/0" translate="no">review()</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#steps/1" translate="no">steps(flow)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#valid_keys/0" translate="no">valid_keys()</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#valid_values/0" translate="no">valid_values()</a>
 
       </div>
 
@@ -213,16 +237,184 @@ for dimensions, filters and metrics used in import table queries</p>
       <span class="text">Functions</span>
     </h1>
     <div class="functions-list">
-<section class="detail" id="group_imported_by/2">
+<section class="detail" id="domain_change/0">
 
   <div class="detail-header">
-    <a href="#group_imported_by/2" class="detail-link" title="Link to this function">
+    <a href="#domain_change/0" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">group_imported_by(q, query)</h1>
+    <h1 class="signature" translate="no">domain_change()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/imported/sql/builder.ex#L210" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/flows.ex#L62" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> domain_change() :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>()</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="invitation/0">
+
+  <div class="detail-header">
+    <a href="#invitation/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">invitation()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/flows.ex#L62" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> invitation() :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>()</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="provisioning/0">
+
+  <div class="detail-header">
+    <a href="#provisioning/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">provisioning()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/flows.ex#L62" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> provisioning() :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>()</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="register/0">
+
+  <div class="detail-header">
+    <a href="#register/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">register()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/flows.ex#L62" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> register() :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>()</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="review/0">
+
+  <div class="detail-header">
+    <a href="#review/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">review()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/flows.ex#L62" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> review() :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>()</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="steps/1">
+
+  <div class="detail-header">
+    <a href="#steps/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">steps(flow)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/flows.ex#L44" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> steps(<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>() | <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()) :: [<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>()]</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="valid_keys/0">
+
+  <div class="detail-header">
+    <a href="#valid_keys/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">valid_keys()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/flows.ex#L58" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -235,16 +427,16 @@ for dimensions, filters and metrics used in import table queries</p>
 
   </section>
 </section>
-<section class="detail" id="naive_dimension_join/3">
+<section class="detail" id="valid_values/0">
 
   <div class="detail-header">
-    <a href="#naive_dimension_join/3" class="detail-link" title="Link to this function">
+    <a href="#valid_values/0" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">naive_dimension_join(q1, q2, metrics)</h1>
+    <h1 class="signature" translate="no">valid_values()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/imported/sql/builder.ex#L451" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/flows.ex#L55" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -254,71 +446,13 @@ for dimensions, filters and metrics used in import table queries</p>
 
   <section class="docstring">
 
+      <div class="specs">
 
-  </section>
-</section>
-<section class="detail" id="select_imported_metrics/2">
+          <pre translate="no"><span class="attribute">@spec</span> valid_values() :: [<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>()]</pre>
 
-  <div class="detail-header">
-    <a href="#select_imported_metrics/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">select_imported_metrics(q, list)</h1>
+          <pre translate="no"><span class="attribute">@spec</span> valid_values() :: [<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>()]</pre>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/imported/sql/builder.ex#L16" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="select_joined_dimensions/2">
-
-  <div class="detail-header">
-    <a href="#select_joined_dimensions/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">select_joined_dimensions(q, query)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/imported/sql/builder.ex#L323" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="select_joined_metrics/2">
-
-  <div class="detail-header">
-    <a href="#select_joined_metrics/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">select_joined_metrics(q, list)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/imported/sql/builder.ex#L347" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
+      </div>
 
 
   </section>
